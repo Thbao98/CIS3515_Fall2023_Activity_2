@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("Array values", numberArray[10].toString())
         /* Step 2: Create adapter to display items from array in Spinner */
         spinner.adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, numberArray)
-
+        spinner.adapter = TextSizeAdapter(_context = this, numberArray)
         // Step 3: Change TextView's text size to the number selected in the Spinner */
         spinner.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
