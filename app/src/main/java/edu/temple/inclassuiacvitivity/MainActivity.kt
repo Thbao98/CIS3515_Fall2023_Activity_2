@@ -14,14 +14,10 @@ class MainActivity : AppCompatActivity() {
         val spinner = findViewById<Spinner>(R.id.spinner)
         val displayTextView = findViewById<TextView>(R.id.textDisplay)
 
-        /* Step 1: Populate this array */
-        //val numberArray = Array Of Numbers
-        //val numberArray = IntArray(100)
+
         val numberArray = Array(100){it}
 
-//        for(i in 1.. 100){
-//            numberArray[i] = i
-//        }
+
 
         Log.d("Array values", numberArray[10].toString())
         /* Step 2: Create adapter to display items from array in Spinner */
@@ -39,5 +35,6 @@ class MainActivity : AppCompatActivity() {
             override fun onNothingSelected(p0: AdapterView<*>){}
 
         }
+
     }
 }
